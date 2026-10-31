@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Solah Khudaef</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#hero" class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Solah Khudaef.
+                </a>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
+                    <a href="#experience" class="hover:text-blue-600 transition">Pengalaman</a>
+                    <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
+                    <a href="#education" class="hover:text-blue-600 transition">Pendidikan</a>
+                    <a href="#certifications" class="hover:text-blue-600 transition">Sertifikat</a>
+                    <a href="#contact" class="hover:text-blue-600 transition">Kontak</a>
+                    <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition">
+                        <i class="fa-solid fa-moon dark:hidden text-gray-600"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button id="themeToggleMobile" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition">
+                        <i class="fa-solid fa-moon dark:hidden text-gray-600"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button id="menuBtn" class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+            <a href="#about" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">Tentang</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">Pengalaman</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">Keahlian</a>
+            <a href="#education" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">Pendidikan</a>
+            <a href="#certifications" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">Sertifikat</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen pt-24 pb-12 flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 opacity-30 dark:opacity-20">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-80 h-80 bg-indigo-500 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left space-y-6">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 rounded-full text-sm font-semibold">
+                    Digital Marketing & Sales Specialist
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+                    Halo, Saya <br><span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Solah Khudaef</span>
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-lg">
+                    Lulusan S1 Manajemen konsentrasi Digital Marketing dengan IPK 3.56. Siap memberikan kontribusi positif dalam bidang Penjualan, Pemasaran Digital, dan Administrasi.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="https://wa.me/6283836178896" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl shadow-lg shadow-blue-500/30 transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> Hubungi Saya
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium rounded-xl transition flex items-center gap-2">
+                        <i class="fa-regular fa-envelope"></i> Kirim Email
+                    </a>
+                </div>
+                <div class="pt-4 flex items-center gap-6 justify-center md:justify-start text-gray-500 dark:text-gray-400">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-red-500"></i> Pamulang, Tangerang Selatan</span>
+                </div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-2xl max-w-sm text-center">
+                        <div class="relative w-48 h-48 mx-auto mb-4 rounded-2xl overflow-hidden shadow-md border-2 border-blue-500/20 group/img">
+                            <!-- Foto Profil -->
+                            <img src="image_c195a5.jpg" id="profileImage" alt="Solah Khudaef" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800';">
+                            <!-- Overlay Tombol Ubah Foto -->
+                            <label for="imageUpload" class="absolute inset-0 bg-black/50 text-white flex flex-col items-center justify-center opacity-0 group-hover/img:opacity-100 transition duration-300 cursor-pointer text-xs font-semibold">
+                                <i class="fa-solid fa-camera text-xl mb-1"></i>
+                                Ganti Foto
+                            </label>
+                            <input type="file" id="imageUpload" accept="image/*" class="hidden">
+                        </div>
+                        <p class="text-xs text-gray-400 mb-3 md:hidden">Ketuk foto untuk mengganti gambar</p>
+                        <h2 class="text-xl font-bold">Solah Khudaef, S.M.</h2>
+                        <p class="text-sm text-blue-600 dark:text-blue-400 font-medium mb-4">S1 Manajemen (Digital Marketing)</p>
+                        <div class="grid grid-cols-2 gap-2 text-xs border-t border-gray-100 dark:border-gray-700 pt-4">
+                            <div class="p-2 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                                <span class="block font-bold text-gray-800 dark:text-gray-200">IPK</span>
+                                <span class="text-blue-600 font-semibold">3.56 / 4.00</span>
+                            </div>
+                            <div class="p-2 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                                <span class="block font-bold text-gray-800 dark:text-gray-200">Status</span>
+                                <span class="text-green-600 font-semibold">Siap Kerja</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">Profil Profesional</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm max-w-4xl mx-auto">
+                <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                    Lulusan S1 Manajemen Universitas Pamulang yang telah menyelesaikan sidang dan yudisium pada tahun 2026. Memiliki pengalaman kerja sebagai <strong class="text-blue-600 dark:text-blue-400">Sales Promotion Boy (SPB)</strong> di berbagai event serta pengalaman sebagai <strong class="text-blue-600 dark:text-blue-400">Helper & Admin</strong> saat PKL di tempat servis komputer. Terbiasa berkomunikasi dengan pelanggan, bekerja dengan target, menangani administrasi dasar, serta mendukung operasional sehari-hari. Memiliki kemampuan komunikasi yang baik, disiplin, bertanggung jawab, mudah beradaptasi, dan mampu bekerja secara mandiri maupun dalam tim.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Kerja -->
+    <section id="experience" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Pengalaman Kerja</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative border-l-2 border-blue-500/30 ml-4 md:ml-32 space-y-12">
+                
+                <!-- Pengalaman 1 (Baru - Astro) -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm transition hover:shadow-md">
+                        <span class="inline-block px-3 py-1 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-300 rounded-full text-xs font-semibold mb-2">Inventory / Logistik</span>
+                        <h3 class="text-xl font-bold">Inventory Controller</h3>
+                        <p class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-4">Astro</p>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300 text-sm list-disc pl-5">
+                            <li>Mengontrol, mencatat, dan memantau ketersediaan stok barang secara akurat di gudang/hub.</li>
+                            <li>Melakukan pengecekan dan sinkronisasi data fisik produk dengan sistem inventory harian (Stock Opname).</li>
+                            <li>Memastikan kualitas, kerapian, serta tanggal kadaluwarsa (FIFO/FEFO) seluruh produk yang disimpan.</li>
+                            <li>Mengidentifikasi dan menangani ketidaksesuaian jumlah stok serta mencegah timbulnya *loss* atau kerusakan barang.</li>
+                            <li>Bekerja sama dengan tim operasional untuk mendukung percepatan pemrosesan dan pemenuhan pesanan pelanggan.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pengalaman 2 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm transition hover:shadow-md">
+                        <span class="inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 rounded-full text-xs font-semibold mb-2">Event / Sales</span>
+                        <h3 class="text-xl font-bold">Sales Promotion Boy (SPB)</h3>
+                        <p class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-4">Jakcloth Event</p>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300 text-sm list-disc pl-5">
+                            <li>Mempromosikan produk kepada pengunjung dan memberikan informasi mengenai produk secara jelas.</li>
+                            <li>Melayani pelanggan secara ramah serta membantu memberikan rekomendasi sesuai kebutuhan.</li>
+                            <li>Berkomunikasi secara aktif dengan calon pelanggan untuk mendukung pencapaian target penjualan.</li>
+                            <li>Menjaga kerapian dan kebersihan area booth selama kegiatan berlangsung.</li>
+                            <li>Membantu melakukan pengecekan dan pencatatan stok barang.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pengalaman 3 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-[17px] top-1 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm transition hover:shadow-md">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 rounded-full text-xs font-semibold mb-2">Administrasi / Operasional</span>
+                        <h3 class="text-xl font-bold">Helper & Admin</h3>
+                        <p class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-4">PKL Tempat Servis Komputer</p>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300 text-sm list-disc pl-5">
+                            <li>Melayani pelanggan secara langsung dengan sikap yang ramah dan profesional.</li>
+                            <li>Membantu menangani administrasi dan kebutuhan operasional harian.</li>
+                            <li>Membantu proses penerimaan dan penyerahan barang/perangkat pelanggan.</li>
+                            <li>Mendukung pekerjaan teknis dasar sesuai kebutuhan operasional.</li>
+                            <li>Menjaga area kerja tetap rapi dan membantu memastikan aktivitas toko berjalan lancar.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian -->
+    <section id="skills" class="py-20 bg-white dark:bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Keahlian & Kompetensi</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Skill Card 1 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 transition">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Microsoft Office</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Mampu menggunakan Microsoft Word, Excel, dan PowerPoint untuk kebutuhan administrasi dan pekerjaan kantor.</p>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 transition">
+                    <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 text-green-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Komunikasi & Pelayanan</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Terbiasa berinteraksi langsung dengan pelanggan dan memberikan pelayanan secara ramah dan profesional.</p>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 transition">
+                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Penjualan & Pemasaran</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Berpengalaman mempromosikan produk, menjelaskan keunggulan produk, dan berorientasi pada target penjualan.</p>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 transition">
+                    <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 text-orange-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Administrasi & Operasional</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Menangani administrasi harian, pengecekan stok barang, packing, serta menjaga kesiapan operasional area kerja.</p>
+                </div>
+
+                <!-- Skill Card 5 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 transition">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Teknologi & Gadget</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Terbiasa menggunakan berbagai perangkat gadget, perangkat komputer, dan aplikasi untuk mendukung kelancaran pekerjaan.</p>
+                </div>
+
+                <!-- Skill Card 6 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 transition">
+                    <div class="w-12 h-12 bg-red-100 dark:bg-red-900/50 text-red-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Kerja Sama & Adaptasi</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Mampu bekerja mandiri maupun tim, memiliki tingkat kedisiplinan tinggi, serta cepat beradaptasi di lingkungan baru.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan -->
+    <section id="education" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Riwayat Pendidikan</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Pendidikan 1 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm flex gap-6 items-start">
+                    <div class="p-4 bg-blue-100 dark:bg-blue-900/40 text-blue-600 rounded-2xl text-2xl">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold text-blue-600 dark:text-blue-400">Lulus Tahun 2026</span>
+                        <h3 class="text-xl font-bold mt-1">S1 Manajemen</h3>
+                        <p class="text-gray-600 dark:text-gray-300 font-medium">Universitas Pamulang (UNPAM)</p>
+                        <p class="text-sm text-gray-500 mt-2">Konsentrasi: <strong class="text-gray-700 dark:text-gray-300">Digital Marketing</strong></p>
+                        <div class="mt-4 inline-block px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300 text-xs font-bold rounded-lg">
+                            IPK: 3.56 / 4.00
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pendidikan 2 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm flex gap-6 items-start">
+                    <div class="p-4 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 rounded-2xl text-2xl">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">Lulus Tahun 2021</span>
+                        <h3 class="text-xl font-bold mt-1">Sekolah Menengah Kejuruan</h3>
+                        <p class="text-gray-600 dark:text-gray-300 font-medium">SMK La-Tahzan Pandeglang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sertifikat & Pelatihan -->
+    <section id="certifications" class="py-20 bg-white dark:bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Sertifikat & Lisensi</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Sertifikat 1 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 flex items-center gap-4">
+                    <div class="p-4 bg-amber-100 text-amber-600 dark:bg-amber-900/40 dark:text-amber-400 rounded-xl text-3xl">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-amber-600 dark:text-amber-400">Tahun 2025</span>
+                        <h3 class="text-lg font-bold">Sertifikat Kompetensi BNSP - Pemasaran</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Membangun Merek Secara Digital (Digital Brand Building)</p>
+                        <p class="text-xs text-gray-500 mt-1">LSP Universitas Pamulang</p>
+                    </div>
+                </div>
+
+                <!-- Sertifikat 2 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 flex items-center gap-4">
+                    <div class="p-4 bg-blue-100 text-blue-600 dark:bg-blue-900/40 dark:text-blue-400 rounded-xl text-3xl">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-blue-600 dark:text-blue-400">Tahun 2025</span>
+                        <h3 class="text-lg font-bold">TOEFL Prediction Test</h3>
+                        <p class="text-sm font-semibold text-gray-700 dark:text-gray-200">Skor: 417</p>
+                        <p class="text-xs text-gray-500 mt-1">Lembaga Bahasa Universitas Pamulang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Hubungi Saya</h2>
+                <p class="text-gray-600 dark:text-gray-300">Saya terbuka untuk peluang kerja maupun diskusi profesional.</p>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Card No HP/WA -->
+                <a href="https://wa.me/6283836178896" target="_blank" class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 text-center hover:border-green-500 transition group">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 dark:bg-green-900/40 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 dark:text-gray-200">Telepon / WhatsApp</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">083836178896</p>
+                </a>
+
+                <!-- Card Email -->
+                <a href="mailto:deffniil2@gmail.com" class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 text-center hover:border-blue-500 transition group">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 dark:bg-blue-900/40 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 transition">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 dark:text-gray-200">Email</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">deffniil2@gmail.com</p>
+                </a>
+
+                <!-- Card Alamat -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 text-center">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 dark:bg-red-900/40 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 dark:text-gray-200">Lokasi</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Jl. Ketapang 1, Pamulang Barat, Tangerang Selatan</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500 dark:text-gray-400">
+        <p>&copy; 2026 Solah Khudaef. All rights reserved.</p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Toggle Dark Mode
+        const themeToggle = document.getElementById('themeToggle');
+        const themeToggleMobile = document.getElementById('themeToggleMobile');
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+        // System Dark Mode Check
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close Mobile Menu on Click Link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Image Uploader Handler
+        const imageUpload = document.getElementById('imageUpload');
+        const profileImage = document.getElementById('profileImage');
+
+        if (imageUpload) {
+            imageUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        profileImage.src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
